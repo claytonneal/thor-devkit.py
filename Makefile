@@ -5,7 +5,8 @@ install:
 test:
 	. .env/bin/activate && python3 -m pytest --cov=thor_devkit --no-cov-on-fail --cov-report=term-missing -vv -s
 
-publish: test
+publish:
 	rm -rf dist/*
-	. .env/bin/activate && python3 setup.py sdist bdist_wheel
-	. .env/bin/activate && python3 -m twine upload dist/*
+	pipenv shell
+	python setup.py sdist bdist_wheel
+	python -m twine upload dist/*

@@ -6,10 +6,9 @@ with open("README.md", "r") as fh:
 assert long_description
 
 setuptools.setup(
-    name="thor-devkit",
-    version="1.0.14",
-    author="A Byte Ahead",
-    author_email="laalaguer@gmail.com",
+    name="cneal-thor-devkit",
+    version="1.0.0",
+    author="cneal",
     description="SDK to interact with VeChain Thor public blockchain.",
     keywords="vechain thor blockchain sdk",
     long_description=long_description,
